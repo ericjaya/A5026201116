@@ -17,6 +17,11 @@ Route::get('/', function () {
 
 //tambahkan disini untuk link route tugas 4 (Cara 2)
 
+Route::get('tugas4', function () {
+    //yang disini tidak banyak proses/tidak banyak persiapan meload form
+    return view('htmltugas4');
+});
+
 Route::get('praktikum2', function () {
     //yang disini tidak banyak proses/tidak banyak persiapan meload form
     return view('htmlpraktikum2');
