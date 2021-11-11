@@ -88,9 +88,9 @@
                 <div class="links">
                     <a href="profileric.html">Tugas 1</a>
                     <a href="profilericcss.html">Tugas 2</a>
-                    <a href="">Tugas 3</a>
+                    <a href="pagination.html">Tugas 3</a>
                     <a href="praktikum.html">Praktikum 1</a>
-                    <a href="">Tugas 4</a>
+                    <a href="tugas4">Tugas 4</a>
                     <a href="praktikum2">Praktikum 2</a>
                     <a href="">ETS</a>
                     <a href="isiannama">Tugas PHP</a>
