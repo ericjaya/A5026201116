@@ -29,5 +29,10 @@ Route::get('praktikum2', function () {
 
 //jika ternyata kasusnya butuh ngeload banyak proses
 
-Route::get('isiannama',"ViewController@showForm") ;
-Route::post('greetings',"ViewController@resultGreetings");
+Route::get('ets',"ViewController@form");
+
+Route::get('tugasphp',"ViewController@formPhp");
+Route::get('hasilphp',"ViewController@hasilPhp");
+
+// Route::get('isiannama',"ViewController@showForm") ;
+// Route::post('greetings',"ViewController@resultGreetings");
