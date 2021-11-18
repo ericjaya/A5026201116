@@ -36,3 +36,15 @@ Route::get('hasilphp',"ViewController@hasilPhp");
 
 // Route::get('isiannama',"ViewController@showForm") ;
 // Route::post('greetings',"ViewController@resultGreetings");
+
+
+//route CRUD
+Route::get('/pegawai','PegawaiController@index');
+Route::get('/pegawai/tambah','PegawaiController@tambah');
+Route::post('/pegawai/store','PegawaiController@store');
+
+//tugas 3 & 4
+Route::get('/pegawai/edit/{id}','PegawaiController@edit');
+Route::post('/pegawai/update','PegawaiController@update');
+
+Route::get('/pegawai/hapus/{id}','PegawaiController@hapus');
