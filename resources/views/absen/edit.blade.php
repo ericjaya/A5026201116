@@ -1,11 +1,10 @@
    @extends('layout.bahagia')
 
    @section('title', 'Mengedit Data Absensi')
-   @section('judulhalaman', 'Edit Absensi Pegawai')
+   @section('subjudul', 'Edit Absensi Pegawai')
 
    @section('konten')
 
-<h3>{{ $judul }}</h3>
 	@foreach($absen as $a)
 	<form action="/absen/update" method="post">
 		{{ csrf_field() }}
