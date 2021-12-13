@@ -12,6 +12,12 @@
 	<br/>
 	<br/>
 
+    <select name="idpegawai" >
+        @foreach($pegawai as $p)
+         <option value="{{ $p->pegawai_id }}">{{ $p->pegawai_nama }}</option>
+        @endforeach
+        </select>
+
 	<form action="/tugas/store" method="post">
 		{{ csrf_field() }}
 		ID Pegawai <input type="number" name="idpegawai" required="required"> <br/>

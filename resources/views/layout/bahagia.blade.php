@@ -14,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
 <style>
 
 body {
@@ -110,7 +111,7 @@ body {
     width: 90%;
 }
 
-.table th {
+.maintable th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
@@ -118,8 +119,13 @@ body {
   color: white;
 }
 
-table, th, td {
+.maintable, th, td {
   border: 1px solid black;
+}
+
+.table-borderless, th, td, tr {
+    border-collapse: collapse;
+    border: 0px;
 }
 
 @media screen and (max-height: 450px) {
@@ -148,7 +154,8 @@ footer {
    bottom:0;
    width:100%;
    height:30px;   /* Height of the footer */
-   margin-left: 50px;
+   padding-right: 120px;
+   text-align: right;
 }
 
 .submit {
@@ -161,7 +168,7 @@ footer {
 <body>
     <div class="container-flex">
     <div class="row">
-        <div class="header">
+        <div class="header" id="myHeader">
             <a class="logo"><img src="{{URL::asset('/images/eric.jpg')}}" alt="profile Pic" height="80" width="80"></a>
             <div class="header-center">
                 <h1>Eric Jaya Aziz - 5026201116</h1>
@@ -176,8 +183,7 @@ footer {
         <a href="pegawai">Pegawai</a>
         <a href="absen">Absen</a>
         <a href="tugas">Tugas</a>
-        <a href="#contact">Mingdep</a>
-        <a href="#contact">Praktikum</a>
+        <a href="kaos">Kaos</a>
     </div>
 
     <div class="main">

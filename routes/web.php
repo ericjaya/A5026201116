@@ -68,7 +68,23 @@ Route::post('/absen/update','AbsenController@update');
 Route::get('/absen/hapus/{id}','AbsenController@hapus');
 
 
-
+//Tugas Pertemuan 14
 Route::get('pegawai','PegawaiController@index');
 Route::get('tugas','TugasController@index');
 Route::get('absen','AbsenController@indexabsen');
+
+//Kuliah Pertemuan 15
+Route::get('/pegawai/cari','PegawaiController@cari');
+Route::get('/pegawai/view/{id}','PegawaiController@detail');
+
+//Praktikum Pertemuan 15
+Route::get('/kaos','KaosController@index');
+Route::get('/kaos/tambah','KaosController@tambah');
+Route::post('/kaos/store','KaosController@store');
+Route::get('/kaos/edit/{id}','KaosController@edit');
+Route::post('/kaos/update','KaosController@update');
+Route::get('/kaos/hapus/{id}','KaosController@hapus');
+Route::get('kaos','KaosController@index');
+Route::get('/kaos/detail/{id}','KaosController@detail');
+Route::get('/kaos/cari','KaosController@cari');
+

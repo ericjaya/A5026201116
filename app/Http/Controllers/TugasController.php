@@ -11,18 +11,23 @@ class TugasController extends Controller
     public function index()
     {
         // mengambil data dari table pegawai
-        $tugas = DB::table('tugas')->get();
+        // $tugas = DB::table('tugas')->get();
+        $tugas = DB::table('tugas')
+        ->join('pegawai', 'tugas.IDPegawai', '=', 'pegawai.pegawai_id')
+        ->select('tugas.*', 'pegawai.pegawai_nama')
+        ->paginate() ;
 
-        // mengirim data pegawai ke view index
+        // mengirim data tugas ke view index
         return view('tugas.index', ['tugas' => $tugas]);
     }
 
     // method untuk menampilkan view form tambah pegawai
     public function tambah()
     {
-
+        // mengambil data dari table pegawai
+        $pegawai = DB::table('pegawai')->orderBy('pegawai_nama', 'asc')->get(); //defaultnya urut Primary Key
         // memanggil view tambah
-        return view('tugas.tambah');
+        return view('tugas.tambah', ['pegawai' => $pegawai]);
     }
 
     // method untuk insert data ke table pegawai
@@ -44,8 +49,12 @@ class TugasController extends Controller
     {
         // mengambil data pegawai berdasarkan id yang dipilih
         $tugas = DB::table('tugas')->where('ID', $id)->get();
+
+        // mengambil data dari table pegawai
+        $pegawai = DB::table('pegawai')->orderBy('pegawai_nama', 'asc')->get(); //defaultnya urut Primary Key
+
         // passing data pegawai yang didapat ke view edit.blade.php
-        return view('tugas.edit', ['tugas' => $tugas]);
+        return view('tugas.edit', ['tugas' => $tugas, 'pegawai' => $pegawai]);
     }
 
     // update data pegawai
