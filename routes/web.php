@@ -88,3 +88,10 @@ Route::get('kaos','KaosController@index');
 Route::get('/kaos/detail/{id}','KaosController@detail');
 Route::get('/kaos/cari','KaosController@cari');
 
+//EAS Pemrograman Web
+Route::get('/keranjangbelanja','KeranjangbelanjaController@index');
+Route::get('/keranjangbelanja/tambah','KeranjangbelanjaController@tambah');
+Route::post('/keranjangbelanja/store','KeranjangbelanjaController@store');
+Route::get('/keranjangbelanja/hapus/{id}','KeranjangbelanjaController@hapus');
+Route::get('eas','KeranjangbelanjaController@index');
+

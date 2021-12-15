@@ -184,6 +184,7 @@ footer {
         <a href="absen">Absen</a>
         <a href="tugas">Tugas</a>
         <a href="kaos">Kaos</a>
+        <a href="eas">EAS</a>
     </div>
 
     <div class="main">
